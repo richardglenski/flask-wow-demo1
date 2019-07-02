@@ -1,0 +1,200 @@
+<html>
+    <head>
+
+        <!--Bootstrap CDN-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!--My CSS-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    
+    </head>
+    <body>
+        <div id="content"> 
+            <div class="jumbotron">
+                <h1>Welcome to my website</h1>
+                <p>At the top of every page there is a button to print that page as a pdf</p>
+                <p>I will add more test content</p>
+                <p>with images, text, charts, and graphs</p>
+                <a href="{{ url_for('generate_pdf') }}"> Download as PDF </a>
+            </div>
+            <hr/>
+            <div class="row">
+            <div class="col">
+                <p>man sorcerer Medivh and compelled him to contact Gul'dan, an orc warlock on the world of Draenor. There, Sargeras' demonic servants among the Burning Legion worked to corrupt the once - peaceful orcs and forge them into a bloodthirsty army known as the Horde. This cursed force invaded Azeroth through the Dark Portal, a dimensional gateway created by Medivh and Gul'dan, and clashed with the human nation of Stormwind. Aided by the half-orc Garona, human champions like Anduin Lothar fought valiantly to protect their kingdom. Yet, in the end,
+                the mighty Horde shattered Stormwind's defenses.
+                Amid the city's tragic fall, Garona betrayed her allies and assassinated King Llane Wrynn, sealing the nation's defeat.
+                </p>
+            </div>
+            <div class="col background-none">
+                <img width="300" alt="Angular Logo" 
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
+                >
+            </div>
+            <div class="col">
+                <p>When we last left Azeroth, the Orcish Horde that had been rampaging across the Eastern Kingdoms had been subdued and pushed back to the Dark Portal that they came from,
+                forced to retreat back to their homeworld of Draenor.
+                    The wizard Khadgar, having studied the spellbooks and writings of his old master Medivh (who created the Dark Portal itself),
+                was able to destroy the hellish gateway once and for all- or so he thought.</p>
+            </div>
+            </div>
+            <hr/>
+            <div class="row">
+            <div class=col>
+                <table>
+                    <tr>
+                    <th>Company</th>
+                    <th>Contact</th>
+                    <th>Country</th>
+                    </tr>
+                    <tr>
+                    <td>Alfreds Futterkiste</td>
+                    <td>Maria Anders</td>
+                    <td>Germany</td>
+                    </tr>
+                    <tr>
+                    <td>Centro comercial Moctezuma</td>
+                    <td>Francisco Chang</td>
+                    <td>Mexico</td>
+                    </tr>
+                    <tr>
+                    <td>Ernst Handel</td>
+                    <td>Roland Mendel</td>
+                    <td>Austria</td>
+                    </tr>
+                    <tr>
+                    <td>Island Trading</td>
+                    <td>Helen Bennett</td>
+                    <td>UK</td>
+                    </tr>
+                    <tr>
+                    <td>Laughing Bacchus Winecellars</td>
+                    <td>Yoshi Tannamuri</td>
+                    <td>Canada</td>
+                    </tr>
+                    <tr>
+                    <td>Magazzini Alimentari Riuniti</td>
+                    <td>Giovanni Rovelli</td>
+                    <td>Italy</td>
+                    </tr>
+                </table>
+            </div>
+                <div class="col background-none">
+                        <div id='graphDiv'></div>
+                        <div is='pieDiv'></div>
+                </div>
+            </div>
+        </div>
+
+    <!--Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <!--D3 scripts-->
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <!--D3 line graph -->
+    <script type="text/javascript">
+        var graphData = {{ data.chart_data | safe }}
+        // Set the dimensions of the svg
+        var margin = {top: 30, right: 50, bottom: 30, left: 50};
+        var svgWidth = 600;
+        var svgHeight = 270;
+        var graphWidth = svgWidth - margin.left - margin.right;
+        var graphHeight = svgHeight - margin.top - margin.bottom;
+        // Parse the date / time
+        var parseDate = d3.time.format("%Y-%m-%d").parse;
+        // Set the ranges
+        var x = d3.time.scale().range([0, graphWidth]);
+        var y = d3.scale.linear().range([graphHeight, 0]);
+        // Define the axes
+        var xAxis = d3.svg.axis().scale(x)
+            .orient("bottom").ticks(5);
+        var yAxis = d3.svg.axis().scale(y)
+            .orient("left").ticks(5);
+        // Define the High line
+        var highLine = d3.svg.line()
+            .x(function(d) { return x(d.Date); })
+            .y(function(d) { return y(d.High); });
+        var closeLine = d3.svg.line()
+            .x(function(d) { return x(d.Date); })
+            .y(function(d) { return y(d.Close); });
+        var lowLine = d3.svg.line()
+            .x(function(d) { return x(d.Date); })
+            .y(function(d) { return y(d.Low); });
+        var area = d3.svg.area()
+            .x(function(d) { return x(d.Date); })
+            .y0(function(d) { return y(d.Low); })
+            .y1(function(d) { return y(d.High); })
+        // Adds the svg canvas
+        var svg = d3.select("#graphDiv")
+            .append("svg")
+            .attr("width", svgWidth)
+            .attr("height", svgHeight)
+            .append("g")
+            .attr("transform", 
+            "translate(" + margin.left + "," + margin.top + ")")
+        // define function
+        function draw(data) {
+            data.forEach(function(d) {
+            d.Date = parseDate(d.Date);
+            d.High = +d.High;
+            d.Close = +d.Close;
+            d.Low = +d.Low;
+            });
+            // Scale the range of the data
+            x.domain(d3.extent(data, function(d) { return d.Date; }));
+            y.domain([d3.min(data, function(d) {
+                return Math.min(d.High, d.Close, d.Low) }),
+                d3.max(data, function(d) {
+                return Math.max(d.High, d.Close, d.Low) })]);
+            // Add the area path.
+            svg.append("path")
+            .datum(data)
+            .attr("class", "area")
+            .attr("d", area)
+            // Add the 2 valueline paths.
+            svg.append("path")
+            .style("stroke", "green")
+            .style("fill", "none")
+            .attr("class", "line")
+            .attr("d", highLine(data));
+            svg.append("path")
+            .style("stroke", "blue")
+            .style("fill", "none")
+            .style("stroke-dasharray", ("3, 3"))
+            .attr("d", closeLine(data));
+            svg.append("path")
+            .style("stroke", "red")
+            .attr("d", lowLine(data));
+            // Add the X Axis
+            svg.append("g")
+            .attr("class", "x axis")
+            .attr("transform", "translate(0," + graphHeight + ")")
+                .call(xAxis);
+            // Add the Y Axis
+            svg.append("g")
+            .attr("class", "y axis")
+            .call(yAxis);
+            svg.append("text")
+            .attr("transform", "translate("+(graphWidth+3)+","+y(graphData[0].High)+")")
+            .attr("dy", ".35em")
+            .attr("text-anchor", "start")
+            .style("fill", "green")
+            .text("High");
+            svg.append("text")
+            .attr("transform", "translate("+(graphWidth+3)+","+y(graphData[0].Low)+")")
+            .attr("dy", ".35em")
+            .attr("text-anchor", "start")
+            .style("fill", "red")
+            .text("Low");
+            svg.append("text")
+            .attr("transform", "translate("+(graphWidth+3)+","+y(graphData[0].Close)+")")
+            .attr("dy", ".35em")
+            .attr("text-anchor", "start")
+            .style("fill", "blue")
+            .text("Close");
+        };
+        draw(graphData);
+    </script>
+
+</body>
+</html>

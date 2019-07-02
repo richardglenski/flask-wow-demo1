@@ -1,0 +1,52 @@
+div {
+    margin:1em;
+}
+.col{
+    background-color: #e3f7fc;
+    border-radius: .5em;
+    text-align: center;
+}
+.jumbotron {
+    background-color: #e3f7fc;
+    border-radius: .25em;
+    text-align: center;
+}
+
+.background-none {
+    background: none !important;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+  img {
+      border-radius:.25em;
+  }
+
+  path {
+    stroke-width: 2;
+    fill: none;
+  }
+  .axis path, .axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+  }
+  .area {
+    fill: #F0F8FF;
+    stroke-width: 0;
+  }
